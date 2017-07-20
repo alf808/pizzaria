@@ -1,0 +1,104 @@
+body {
+	/*font-family: 'Amatica SC', cursive;*/
+	font-family: 'Capriola', sans-serif;
+	font-size: 1.2em;
+	/*background-color: rgb(255, 209, 167);*/
+}
+
+#name, #tagLine {
+	margin: 0;
+}
+
+#wholeBod {
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: relative; /* relative to the viewport */
+}
+
+#wholeBod::after {
+	content: "";
+	max-width: 100%;
+	height: auto;
+	background-image: url("../assets/pizzaMan.jpeg");
+	background-repeat: no-repeat;
+	background-size: contain;
+/* 	opacity: 0.2; */
+	top: 0; /* 0 away from parent top */
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute; /* absolute with respect to parent tag */
+	z-index: -1;
+}
+
+#topMenu {
+	display:inline-block;
+	width: auto;
+}
+
+.guide {
+	padding: 8px 20px;
+	float: left;
+	width: auto;
+	border: none;
+	outline: none;
+	display: block;
+	background-color: gray;
+	/*opacity: .8;*/
+}
+
+.guide a {
+	text-decoration: none;
+	color: #fff;
+	display: block;
+}
+
+.guide:hover {
+	background-color: #005f5f;
+}
+
+section {
+	/*background-color: gray;*/
+	/*opacity: 0.6;*/
+	border: 1px solid orange;
+	margin: 14px 4px 16px 4px;
+	padding: 6px 4px 6px 4px;
+}
+
+.content {
+	padding-left: 8px;
+}
+
+.sectionTitle {
+	color: red;
+	margin: 4px 0 10px 0;
+	font-weight: bolder;
+	/*padding-left: 8px;*/
+}
+
+.pizza {
+	padding: 4px 1px 20px 4px;
+}
+
+.pizzaName, .price {
+	font-weight: 700;
+}
+
+.price {
+	position: absolute;
+	right: 1.2em;
+}
+
+.pizzaName::after {
+	content: ":  "
+}
+
+.description {
+	font-size: .8em;
+}
+
+#addy {
+	margin-top: 2px;
+	list-style-type: none;
+}
